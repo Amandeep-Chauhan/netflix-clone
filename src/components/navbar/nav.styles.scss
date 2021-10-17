@@ -1,0 +1,27 @@
+.nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  .nav_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+
+    .nav_logo {
+      width: 80px;
+      object-fit: contain;
+    }
+
+    .nav_avatar {
+      width: 30px;
+      height: 20px;
+    }
+  }
+}
+
+.nav_black {
+  background: #000;
+}
