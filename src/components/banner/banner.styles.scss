@@ -17,6 +17,41 @@
       padding-bottom: 0.3rem;
     }
     &-buttons {
+      display: flex;
+
+      .banner_content-button {
+        padding: 0.4rem 0.8rem;
+        border: none;
+        margin: 0 0.3rem;
+        font-weight: 600;
+        border-radius: 6px;
+        background-color: #fff;
+        color: #000;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        .info-icon {
+          svg {
+            width: 15px;
+            height: 15px;
+          }
+        }
+        .icon {
+          margin-right: 5px;
+        }
+
+        &:hover {
+          background-color: #ffffff95;
+        }
+
+        &:last-child {
+          background-color: #ffffff60;
+
+          &:hover {
+            background-color: #ffffff30;
+          }
+        }
+      }
     }
     &-desc {
       width: 45rem;

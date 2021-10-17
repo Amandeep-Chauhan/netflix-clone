@@ -24,4 +24,9 @@
 
 .nav_black {
   background: #000;
+  transition: 0.3s ease-in;
+}
+
+.nav_shadow {
+  background: linear-gradient(180deg, rgb(21, 21, 21), transparent);
 }

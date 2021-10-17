@@ -18,7 +18,7 @@ export default function Nav() {
     return;
   }, []);
   return (
-    <div className={`nav ${show ? "nav_black" : ""}`}>
+    <div className={`nav ${show ? "nav_black" : "nav_shadow"}`}>
       <div className="nav_content">
         <img
           className="nav_logo"
