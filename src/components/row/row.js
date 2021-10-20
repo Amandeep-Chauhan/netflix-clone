@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../../axios/axios";
 
-import "./row.style.scss";
+import "./row.style.css";
 
 function Row({ title, fetchUrl, isLargeRow = false }) {
   const [movies, setMovies] = useState([]);
@@ -27,7 +27,7 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
             ((isLargeRow && movie.poster_path) ||
               (!isLargeRow && movie.backdrop_path)) && (
               <img
-                className={`row_posters_img ${isLargeRow && "row_posterLarge"}`}
+                className={`row_poster ${isLargeRow && "row_posterLarge"}`}
                 key={movie.id}
                 src={`${base_url}${
                   isLargeRow ? movie.poster_path : movie.backdrop_path
@@ -42,4 +42,3 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
 }
 
 export default Row;
-// https://netflix-clone-62a0d.web.app

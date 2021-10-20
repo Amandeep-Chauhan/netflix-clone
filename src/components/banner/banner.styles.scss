@@ -1,5 +1,5 @@
 .banner {
-  height: 35rem;
+  height: 40rem;
   color: #fff;
   object-fit: contain;
   position: relative;
@@ -12,15 +12,15 @@
     justify-content: center;
 
     &-title {
-      font-size: 3rem;
+      font-size: 4rem;
       font-weight: 800;
-      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
     }
     &-buttons {
       display: flex;
 
       .banner_content-button {
-        padding: 0.4rem 0.8rem;
+        padding: 0.6rem 1rem;
         border: none;
         margin: 0 0.3rem;
         font-weight: 600;
@@ -32,8 +32,8 @@
         align-items: center;
         .info-icon {
           svg {
-            width: 15px;
-            height: 15px;
+            width: 18px;
+            height: 18px;
           }
         }
         .icon {
@@ -57,7 +57,7 @@
       width: 45rem;
       line-height: 1.3;
       padding-top: 1rem;
-      font-size: 0.8rem;
+      font-size: 1rem;
       max-width: 360px;
       overflow: hidden;
       display: -webkit-box;
