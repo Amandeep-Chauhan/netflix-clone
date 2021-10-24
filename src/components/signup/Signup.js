@@ -7,6 +7,7 @@ const Signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [success, setSuccess] = useState("");
   const isInvalid = username === "" || password === "" || email === "";
 
   const signup = (e) => {
@@ -15,6 +16,10 @@ const Signup = () => {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((result) => {
+        setSuccess("Successfully signed up");
+        setUsername("");
+        setEmail("");
+        setPassword("");
         result.user.updateProfile({ displayName: username });
       })
       .catch((error) => {
@@ -37,6 +42,7 @@ const Signup = () => {
       </div>
       <div className="signup">
         <form>
+          {success && <p className="success">{success}</p>}
           <h1>Sign Up</h1>
           <input
             type="text"
@@ -70,7 +76,9 @@ const Signup = () => {
           </button>
           <h4>
             <span>Already having an account.</span>
-            <Link to="/signin"> Sign In now.</Link>
+            <Link to="/signin" className="signinLink">
+              Sign In now.
+            </Link>
           </h4>
           <p className="captcha">
             This page is protected by Google reCAPTCHA to ensure you're not a
