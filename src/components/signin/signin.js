@@ -4,6 +4,7 @@ import { auth } from "../../firebase";
 import "./signin.styles.scss";
 
 const Signin = () => {
+  // const { password, setPassword, email, setEmail } = props;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,7 +16,7 @@ const Signin = () => {
     e.preventDefault();
     auth
       .signInWithEmailAndPassword(email, password)
-      .then(() => {
+      .then((user) => {
         console.log("succesfully signed In");
         history.push("/browse");
       })

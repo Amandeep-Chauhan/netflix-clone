@@ -27,8 +27,10 @@ function Footer() {
       <p className="content">Questions? Contact us.</p>
       <div>
         <ul>
-          {footerContent.map((list) => (
-            <li className="list">{list}</li>
+          {footerContent.map((list, idx) => (
+            <li className="list" key={idx}>
+              {list}
+            </li>
           ))}
         </ul>
         <p className="content">Netflix India</p>

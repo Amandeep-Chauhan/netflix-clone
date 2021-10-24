@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
+import { Link, useHistory } from "react-router-dom";
 import { auth } from "../../firebase";
 import "./signup.styles.scss";
 
@@ -9,6 +10,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState("");
   const isInvalid = username === "" || password === "" || email === "";
+  const history = useHistory();
 
   const signup = (e) => {
     e.preventDefault();
@@ -21,6 +23,9 @@ const Signup = () => {
         setEmail("");
         setPassword("");
         result.user.updateProfile({ displayName: username });
+        setTimeout(() => {
+          history.push("/signin");
+        }, 5000);
       })
       .catch((error) => {
         alert(error.message);
