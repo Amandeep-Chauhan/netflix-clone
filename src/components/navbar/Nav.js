@@ -24,6 +24,7 @@ export default function Nav() {
   const navbarTransiton = () => {
     if (window.scrollY > 0) {
       setShowList(false);
+      setSettings(false);
       if (window.scrollY > 100) {
         setShow(true);
       } else {
@@ -84,7 +85,8 @@ export default function Nav() {
             <img
               className="nav_avatar"
               onClick={() => setSettings(!settings)}
-              src={avatars[Math.floor(Math.random() * avatars.length)]}
+              src={avatars[4]}
+              // src={avatars[Math.floor(Math.random() * avatars.length)]}
               alt="avatar img"
             />
           </div>
@@ -104,22 +106,25 @@ export default function Nav() {
           <div className="users">
             <div className="user">
               <img
-                src={avatars[Math.floor(Math.random() * avatars.length)]}
-                alt="avatar image"
+                src={avatars[0]}
+                // src={avatars[Math.floor(Math.random() * avatars.length)]}
+                alt="profile-avatar"
               />
               <span>James</span>
             </div>
             <div className="user">
               <img
-                src={avatars[Math.floor(Math.random() * avatars.length)]}
-                alt="avatar image"
+                src={avatars[3]}
+                // src={avatars[Math.floor(Math.random() * avatars.length)]}
+                alt="profile-avatar"
               />
               <span>Kevin</span>
             </div>
             <div className="user">
               <img
-                src={avatars[Math.floor(Math.random() * avatars.length)]}
-                alt="avatar image"
+                src={avatars[4]}
+                // src={avatars[Math.floor(Math.random() * avatars.length)]}
+                alt="profile-avatar"
               />
               <span>Raquel</span>
             </div>

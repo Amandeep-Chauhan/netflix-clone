@@ -16,7 +16,7 @@
         align-items: center;
 
         .nav_logo {
-          width: 100px;
+          width: 7rem;
           object-fit: contain;
         }
 
@@ -49,6 +49,7 @@
               margin: 0 1rem;
               font-size: 1rem;
               position: relative;
+              cursor: pointer;
               left: 0;
               transition: 0.4s ease-in;
 
@@ -129,7 +130,7 @@
   .profile_content {
     position: absolute;
     top: 5rem;
-    right: 22px;
+    right: 4%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 111;
     padding: 0 1rem 0.5rem 0.8rem;
@@ -203,6 +204,7 @@
 }
 
 $breakpoint-tablet: 900px;
+$breakpoint-mobile: 480px;
 
 @media (max-width: $breakpoint-tablet) {
   .browse {
@@ -214,5 +216,17 @@ $breakpoint-tablet: 900px;
   }
   .mob_menu {
     display: block !important;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .right_nav svg {
+    width: 20px !important;
+    height: 20px;
+    margin: 0 0.5rem !important;
+  }
+
+  .left_nav .nav_menu {
+    margin-left: 1.5rem !important;
   }
 }
